@@ -9,11 +9,13 @@ arch=(any)
 url='https://wordpress.org/'
 license=(GPL)
 
-depends=('php' 
-         'mariadb')
+depends=('php'
+         'php-imagick
+         'php-gd'
+         'mariadb'
+         )
 
 optdepends=('apache: Servidor Web'
-            'mariadb: Servidor de Banco de dados'
             'nginx: Servidor Web')
 
 options=(emptydirs)
