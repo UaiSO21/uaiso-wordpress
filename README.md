@@ -5,3 +5,7 @@
 Diretório de instalação:
 
 `/srv/http/wordpress`
+
+Ao instalar esse programa você instalará automaticamente o PHP, as extensões recomendas pela equipe do Wordpress e o MARIADB. No entanto é preciso obervar que o Servidor Web não foi instalado, logo você deve instalar um de sua preferência, como **APACHE** ou **NGINX**
+
+`sudo pacman -S apache` ou `sudo pacman -S nginx`
