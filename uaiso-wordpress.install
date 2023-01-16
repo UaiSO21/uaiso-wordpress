@@ -1,0 +1,19 @@
+post_install() {
+ # Make uploads work
+  install -dm775 /srv/http/wordpress/wp-content/uploads
+  chown http:http /srv/http/wordpress/wp-content/uploads
+  echo 'Você agora pode configurar seu servidor web (compatível com PHP) para executar o WordPress.'
+}
+
+pre_remove() {
+  cp -r /srv/http/wordpress /srv/http/wordpress-backup-$(date +%y.%m.%d)
+  echo 'Your WordPress folder was backed up to /srv/http/wordpress-backup-$(date +%y.%m.%d)'
+}
+
+post_remove() {
+  rm -rf /srv/http/wordpress
+}
+
+post_upgrade() {
+  echo 'WordPress was placed in /srv/http'
+}
