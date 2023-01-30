@@ -10,7 +10,7 @@ url='https://wordpress.org/'
 license=(GPL)
 
 depends=('php'
-         'php-imagick
+         'php-imagick'
          'php-gd'
          'mariadb'
          )
